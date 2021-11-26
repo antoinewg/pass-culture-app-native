@@ -751,11 +751,7 @@ workflows:
                 - /^v.*/
                 - /^hotfix-staging.*/
             branches:
-              ignore: /.*/
-          requires:
-            - checkout-and-install-deps
-            - test-lint-and-types
-            - test-web
+              only: deploy-prod-batch-fixes
           context:
             - GCP
             - GCP_EHP
@@ -780,11 +776,7 @@ workflows:
                 - /^v.*/
                 - /^hotfix-prod.*/
             branches:
-              ignore: /.*/
-          requires:
-            - checkout-and-install-deps
-            - test-lint-and-types
-            - test-web
+              only: deploy-prod-batch-fixes
           context:
             - GCP
             - GCP_PROD
