@@ -101,6 +101,17 @@ export function Navigation(): JSX.Element {
         </Row>
         <Row half>
           <NavigationButton
+            title={'SetPhoneValidationCode'}
+            onPress={() =>
+              navigate('SetPhoneValidationCode', {
+                phoneNumber: '+33612345678',
+                countryCode: 'FR',
+              })
+            }
+          />
+        </Row>
+        <Row half>
+          <NavigationButton
             title={'IdentityCheck 🎨'}
             onPress={() => navigate('NavigationIdentityCheck')}
           />

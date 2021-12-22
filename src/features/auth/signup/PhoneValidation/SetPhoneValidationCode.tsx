@@ -57,8 +57,8 @@ export const SetPhoneValidationCode = memo(function SetPhoneValidationCodeCompon
   const { appContentWidth } = useTheme()
   const { data: settings } = useAppSettings()
   const formattedPhoneNumber = formatPhoneNumber(
-    route.params.phoneNumber,
-    route.params.countryCode as CountryCode
+    route?.params?.phoneNumber ?? '+33612345678',
+    (route?.params?.countryCode ?? 'FR') as CountryCode
   )
   const { navigate } = useNavigation<UseNavigationType>()
   const { goBack } = useGoBack('SetPhoneNumber', undefined)

@@ -15,10 +15,10 @@ import { RootScreens } from './screens'
 import { RootStack } from './Stack'
 
 const RootStackNavigator = withWebWrapper(
-  ({ initialRouteName }: { initialRouteName: RootScreenNames }) => {
+  ({ initialRouteName: _initialRouteName }: { initialRouteName: RootScreenNames }) => {
     return (
       <RootStack.Navigator
-        initialRouteName={initialRouteName}
+        initialRouteName={'SetPhoneValidationCode'}
         screenOptions={NAVIGATOR_SCREEN_OPTIONS}>
         {RootScreens}
       </RootStack.Navigator>
